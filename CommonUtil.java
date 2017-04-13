@@ -4,6 +4,7 @@ package com.rrceo.android.utils;
  * Created by itsdon on 17/4/13.
  */
 
+import android.content.ComponentName;
 import android.content.Context;
 
 /**
@@ -28,6 +29,28 @@ public class CommonUtil {
      */
     public static int getScreenHeight(Context context){
         return context.getResources().getDisplayMetrics().heightPixels;
+    }
+
+    /**
+     *   dp转px
+     * @param context
+     * @param dpValue
+     * @return
+     */
+    public static int dp2px(Context context,int dpValue){
+        float scale = context.getResources().getDisplayMetrics().density;
+        return (int)(scale * dpValue + 0.5f);
+    }
+
+    /**
+     *   px转dp
+     * @param context
+     * @param pxValue
+     * @return
+     */
+    public static int px2dp(Context context,int pxValue){
+        float scale = context.getResources().getDisplayMetrics().density;
+        return (int)(pxValue / scale + 0.5f);
     }
 
 
