@@ -53,5 +53,27 @@ public class CommonUtil {
         return (int)(pxValue / scale + 0.5f);
     }
 
+    /**
+     *   sp转px
+     * @param context
+     * @param spValue
+     * @return
+     */
+    public static int sp2px(Context context,int spValue){
+        float scale = context.getResources().getDisplayMetrics().scaledDensity;
+        return (int)(spValue * scale + 0.5f);
+    }
+
+    /**
+     *   px转sp
+     * @param context
+     * @param pxValue
+     * @return
+     */
+    public static int px2sp(Context context,int pxValue){
+        float scale = context.getResources().getDisplayMetrics().scaledDensity;
+        return (int)(pxValue / scale + 0.5f);
+    }
+
 
 }
